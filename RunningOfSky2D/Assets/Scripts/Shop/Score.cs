@@ -5,30 +5,38 @@ using UnityEngine.UI;
 public class Score : MonoBehaviour
 {
     [SerializeField] private TMP_Text _scoreText;
-    [SerializeField] private TMP_Text _scoreTextInShop;
-
-    [SerializeField] private float _speedGetScore;
+    [SerializeField] private TMP_Text _scoreCoinText;
+    [SerializeField] public float _speedGetScore;
     private float _time;
-    public int Count;
- 
+    [SerializeField] public static int Money;
 
-    private void Awake()
+    public int ScoreUp;
+
+
+
+
+
+
+    private void Start()
     {
-        Count += PlayerPrefs.GetInt("Money"); 
+        Money = PlayerPrefs.GetInt("Money");
+        Coin.Coins = PlayerPrefs.GetInt("Coin");
+        ScoreUp = PlayerPrefs.GetInt("ScoreUpSpeed");
+
+
+
     }
-   
     private void Update()
     {
         _time += Time.deltaTime * _speedGetScore;
         if (_time > 1)
         {
-            Count++;
+            Money = Money + 1 + ScoreUp;
             _time = 0;
+           PlayerPrefs.SetInt("Money", Money);
         }
-        PlayerPrefs.SetInt("Money", Count);
-        _scoreText.text = Count.ToString();
-        _scoreTextInShop.text = Count.ToString();
+        _scoreText.text = Money.ToString();
+        _scoreCoinText.text = Coin.Coins.ToString();
+        
     }
-
-    public void ResetScore() => PlayerPrefs.DeleteKey("Money");
 }

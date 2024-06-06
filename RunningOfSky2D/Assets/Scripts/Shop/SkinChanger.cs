@@ -23,10 +23,10 @@ public class SkinChanger : MonoBehaviour
 
     public void ChancedSkin()
     {
-        if (_score.Count >= _priceForBuy)
+        if (Score.Money >= _priceForBuy)
         {
             _playerSkin.sprite = _sprite;
-            _score.Count -= _priceForBuy;
+            Score.Money -= _priceForBuy;
         }
     }
 }

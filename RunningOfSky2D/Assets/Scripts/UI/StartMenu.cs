@@ -14,4 +14,12 @@ public class StartMenu : MonoBehaviour
         _startMenu.gameObject.SetActive(false);
     }
     public void QuitGame() => Application.Quit();
+
+    public void SceneShop() => SceneManager.LoadScene(1);
+
+    public void ResetAll()
+    {
+        PlayerPrefs.DeleteAll();
+        SceneManager.LoadScene(0);
+    }
 }
