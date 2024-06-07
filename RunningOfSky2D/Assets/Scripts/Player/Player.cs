@@ -6,9 +6,9 @@ namespace Player
     public class Player : MonoBehaviour
     {
         [SerializeField] private int _health;
-
         public event UnityAction<int> HealthChanged;
         public event UnityAction PlayerDead;
+        
 
         private void Start() => HealthChanged?.Invoke(_health);
 

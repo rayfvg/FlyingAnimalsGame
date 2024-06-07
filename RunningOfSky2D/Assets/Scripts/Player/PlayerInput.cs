@@ -11,8 +11,11 @@ namespace Player
 
         private void Update()
         {
+           
+
             if (Input.GetKeyDown(KeyCode.W))
                 _mover.TryMoveUp();
+
 
             if (Input.GetKeyDown(KeyCode.S))
                 _mover.TryMoveDown();

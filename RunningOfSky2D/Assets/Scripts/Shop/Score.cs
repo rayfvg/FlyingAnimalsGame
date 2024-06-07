@@ -6,25 +6,18 @@ public class Score : MonoBehaviour
 {
     [SerializeField] private TMP_Text _scoreText;
     [SerializeField] private TMP_Text _scoreCoinText;
+    [SerializeField] private TMP_Text _scoreRecordText;
     [SerializeField] public float _speedGetScore;
     private float _time;
     [SerializeField] public static int Money;
 
     public int ScoreUp;
 
-
-
-
-
-
     private void Start()
     {
-        Money = PlayerPrefs.GetInt("Money");
+        Money = 0;
         Coin.Coins = PlayerPrefs.GetInt("Coin");
         ScoreUp = PlayerPrefs.GetInt("ScoreUpSpeed");
-
-
-
     }
     private void Update()
     {
@@ -37,6 +30,6 @@ public class Score : MonoBehaviour
         }
         _scoreText.text = Money.ToString();
         _scoreCoinText.text = Coin.Coins.ToString();
-        
+        _scoreRecordText.text = PlayerPrefs.GetInt("Money").ToString();
     }
 }

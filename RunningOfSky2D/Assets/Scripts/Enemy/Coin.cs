@@ -10,7 +10,7 @@ public class Coin : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<Player.Player>())
         {
-            Coins += 50;
+            Coins += 5;
             PlayerPrefs.SetInt("Coin", Coins);
            
         }
