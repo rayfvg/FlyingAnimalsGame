@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class ScinControl : MonoBehaviour
 {
+    public AudioSource AudioSourceBuy;
+    public AudioSource AudioSourceClick;
     private int ScoreUpSpeed;
     public int skinNum;
     public Button buyButton;
@@ -73,6 +75,8 @@ public class ScinControl : MonoBehaviour
         {
             if (Coin.Coins >= price)
             {
+                AudioSourceBuy.Play();
+
                 iLock.GetComponent<Image>().sprite = trueLock;
                 buyButton.GetComponent<Image>().sprite = equipped;
                 Coin.Coins -= price;
@@ -106,6 +110,8 @@ public class ScinControl : MonoBehaviour
             buyButton.GetComponent<Image>().sprite = equipped;
             PlayerPrefs.SetInt(GetComponent<Image>().name + "equip", 1);
             PlayerPrefs.SetInt("skinNum", skinNum);
+
+            AudioSourceClick.Play();
 
             foreach (Image img in skins)
             {

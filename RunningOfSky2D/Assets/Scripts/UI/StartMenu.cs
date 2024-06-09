@@ -1,12 +1,18 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using YG;
 
 public class StartMenu : MonoBehaviour
 {
     [SerializeField] private GameOverScript _gameOverScript;
     [SerializeField] private StartMenu _startMenu;
 
-    private void Start() => Time.timeScale = 0;
+
+    private void Start()
+    {
+        Time.timeScale = 0;
+        YandexGame.FullscreenShow();
+    }
 
     public void StartGame()
     {

@@ -31,6 +31,12 @@ namespace Player
             _audioSourceCoin.Play();
         }
 
+        public void AddMoneyForAds()
+        {
+            Coin.Coins += 50;
+            PlayerPrefs.SetInt("Coin", Coin.Coins);
+        }
+
         public void Die() => PlayerDead?.Invoke();
     }
 }
