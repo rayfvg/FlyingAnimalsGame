@@ -3,12 +3,18 @@ using UnityEngine;
 public class Spawner : ObjectPool
 {
     [SerializeField] private GameObject[] _enemyPrefabs;
+    [SerializeField] private GameObject _coinPrefabs;
+
     [SerializeField] private float _timeBetweenSpawn;
     [SerializeField] private Transform[] _spawnerPosition;
 
     private float _time;
 
-    private void Start() => Initialize(_enemyPrefabs);
+    private void Start()
+    {
+        Initialize(_enemyPrefabs);
+        Initialize(_coinPrefabs);
+    }
 
     private void Update()
     {

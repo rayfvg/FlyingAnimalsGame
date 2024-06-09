@@ -1,0 +1,2 @@
+Build path: G:/GitHub/FlyingAnimalsGame/FlyingAnimalsGame/RunningOfSky2D/builder
+Build number: 2

@@ -34,12 +34,15 @@ namespace Player
         {
             if (transform.position.y < _maxHeightY)
                 SetNextPosition(_stepSize);
+            if(Time.timeScale >= 1)
             _audioSource.Play();
+
         }
         public void TryMoveDown()
         {
             if (transform.position.y > _minHeightY)
                 SetNextPosition(-_stepSize);
+            if(Time.timeScale >=1)
             _audioSource.Play();
         }
         private void SetNextPosition(float stepSize) => _targetPosition = new Vector2(_targetPosition.x, _targetPosition.y + stepSize);

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Events;
+using YG;
 
 namespace Player
 {
@@ -21,7 +22,10 @@ namespace Player
             _audioSource.Play();
             HealthChanged?.Invoke(_health);
             if (_health <= 0)
+            {
                 Invoke("Die", 0.4f);
+               
+            }
         }
       
         public void TakeCoin()

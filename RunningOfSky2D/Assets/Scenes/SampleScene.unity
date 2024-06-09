@@ -1210,7 +1210,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &439049402
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1701,16 +1701,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _container: {fileID: 565937109}
-  _capacity: 15
+  _capacity: 3
   _enemyPrefabs:
-  - {fileID: 5402369174985932630, guid: 468faaa4ff1aa354a9e145f032ffb6f8, type: 3}
   - {fileID: 5451207626418622461, guid: af1d1ec6733397d48938b0f062dab8cf, type: 3}
   - {fileID: 3109495607008325418, guid: 3ca4c96cdd1062f44b3352c59ca114d5, type: 3}
-  - {fileID: 5402369174985932630, guid: 468faaa4ff1aa354a9e145f032ffb6f8, type: 3}
   - {fileID: 5442104714564879606, guid: 3e9808aed57befe40ac47bfd415818ea, type: 3}
   - {fileID: 6864987620090601321, guid: ab8c51409048d944f8eab5e9d4b267b8, type: 3}
-  - {fileID: 5402369174985932630, guid: 468faaa4ff1aa354a9e145f032ffb6f8, type: 3}
   - {fileID: 6212743749183978703, guid: 8d8ecde3d72ceda46a02f23c5af771c3, type: 3}
+  _coinPrefabs: {fileID: 5402369174985932630, guid: 468faaa4ff1aa354a9e145f032ffb6f8, type: 3}
   _timeBetweenSpawn: 1
   _spawnerPosition:
   - {fileID: 1680934050}
@@ -2206,7 +2204,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 99999999
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3437,7 +3435,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u041E\u0447\u043A\u0438"
+  m_text: Puan
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3500,7 +3498,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -31.913597, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -4236,8 +4234,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 147, y: -251}
-  m_SizeDelta: {x: 321.6598, y: 68.563995}
+  m_AnchoredPosition: {x: 133.29077, y: -251.02835}
+  m_SizeDelta: {x: 294.2415, y: 68.6207}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1772223770
 MonoBehaviour:
@@ -5189,8 +5187,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -306, y: -3}
-  m_SizeDelta: {x: 275.028, y: 75.1748}
+  m_AnchoredPosition: {x: -294, y: -0.13864}
+  m_SizeDelta: {x: 275.028, y: 68.898}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &2080635753
 MonoBehaviour:
